@@ -1,5 +1,4 @@
 package com.itcero.itcero.interfaceService;
-
 import com.itcero.itcero.modelo.Postulante;
 
 import java.util.List;

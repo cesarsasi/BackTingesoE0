@@ -14,7 +14,6 @@ public class Postulante {
     private int idCarrera;
 
     public Postulante(){
-
     }
 
     public Postulante(int id, String nombre, String rut, String f_nacimiento, int idCarrera) {
