@@ -27,7 +27,12 @@ public class PostulanteService implements IpostulanteService {
 
     @Override
     public int save(Postulante p) {
-        return 0;
+        int res=0;
+        Postulante postulante = data.save(p);
+        if(!postulante.equals(null)){
+            res=1;
+        }
+        return res;
     }
 
     @Override
