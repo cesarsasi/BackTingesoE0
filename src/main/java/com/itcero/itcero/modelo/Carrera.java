@@ -1,48 +1,51 @@
 package com.itcero.itcero.modelo;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "carrera")
 public class Carrera {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nombreCarrera;
-    private int codigo;
+    @Column(name = "codigo",length = 10)
+    private String codigo;
+    @Column(name = "nombre",length = 20)
+    private String nombre;
 
-    public Carrera (){
+    public Carrera(){
 
     }
 
-    public Carrera(int id, String nombreCarrera, int codigo) {
-        super();
+    public Carrera(int id, String codigo, String nombre) {
         this.id = id;
-        this.nombreCarrera = nombreCarrera;
         this.codigo = codigo;
+        this.nombre = nombre;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int idC) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getNombreCarrera() {
-        return nombreCarrera;
-    }
-
-    public void setNombreCarrera(String nombreCarrera) {
-        this.nombreCarrera = nombreCarrera;
-    }
-
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

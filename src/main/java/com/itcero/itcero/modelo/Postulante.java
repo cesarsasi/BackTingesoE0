@@ -6,18 +6,20 @@ import javax.persistence.*;
 @Table(name = "postulante")
 public class Postulante {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "nombre",length = 20)
     private String nombre;
+    @Column(name = "rut",length = 10)
     private String rut;
+    @Column
     private String f_nacimiento;
+    @Column
     private int idCarrera;
 
     public Postulante(){
     }
 
     public Postulante(int id, String nombre, String rut, String f_nacimiento, int idCarrera) {
-        super();
         this.id = id;
         this.nombre = nombre;
         this.rut = rut;
