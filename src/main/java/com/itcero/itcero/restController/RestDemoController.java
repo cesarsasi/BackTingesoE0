@@ -1,8 +1,6 @@
 package com.itcero.itcero.restController;
 
-import com.itcero.itcero.interfaces.ICarrera;
 import com.itcero.itcero.interfaces.IPostulante;
-import com.itcero.itcero.modelo.Carrera;
 import com.itcero.itcero.modelo.Postulante;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/postulantes")
 public class RestDemoController {
 

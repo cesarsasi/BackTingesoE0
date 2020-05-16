@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "postulante")
 public class Postulante {
     @Id
+    @GeneratedValue
     private int id;
     @Column(name = "nombre",length = 20)
     private String nombre;
@@ -14,7 +15,7 @@ public class Postulante {
     @Column
     private String f_nacimiento;
     @Column
-    private int idCarrera;
+    private String nomCarrera;
 
     public Postulante(){
     }
@@ -24,7 +25,7 @@ public class Postulante {
         this.nombre = nombre;
         this.rut = rut;
         this.f_nacimiento = f_nacimiento;
-        this.idCarrera = idCarrera;
+        this.nomCarrera = nomCarrera;
     }
 
     public int getId() {
@@ -59,11 +60,11 @@ public class Postulante {
         this.f_nacimiento = f_nacimiento;
     }
 
-    public int getIdCarrera() {
-        return idCarrera;
+    public String getnomCarrera() {
+        return nomCarrera;
     }
 
-    public void setIdCarrera(int idCarrera) {
-        this.idCarrera = idCarrera;
+    public void setnomCarrera(String nomCarrera) {
+        this.nomCarrera = nomCarrera;
     }
 }

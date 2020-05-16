@@ -1,14 +1,12 @@
 package com.itcero.itcero.modelo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "carrera")
 public class Carrera {
     @Id
+    @GeneratedValue
     private int id;
     @Column(name = "codigo",length = 10)
     private String codigo;
