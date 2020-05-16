@@ -3,10 +3,7 @@ package com.itcero.itcero.restController;
 import com.itcero.itcero.interfaces.ICarrera;
 import com.itcero.itcero.modelo.Carrera;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +17,7 @@ public class RestCarrController {
         return repoc.findAll();
     }
     @PostMapping
-    public void insertar(Carrera carrera){
+    public void insertar(@RequestBody Carrera carrera){
         repoc.save(carrera);
     }
 }
